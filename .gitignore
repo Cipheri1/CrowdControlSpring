@@ -1,0 +1,6 @@
+target/
+config/
+nbactions.xml
+nb-configuration.xml
+nbproject/private/
+*.class
