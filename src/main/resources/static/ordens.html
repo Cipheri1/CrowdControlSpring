@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ordens de serviço – CrowdControl</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="ordens">
+<div class="app"><aside id="menu"></aside>
+<main>
+<div class="topo"><h2>Ordens de serviço</h2><span id="ola"></span></div>
+<div id="filtros" class="filtros"></div>
+<div class="painel tabela"><table><thead id="cab"></thead><tbody id="corpo"></tbody></table></div>
+<form id="form" class="painel" novalidate>
+<h3>Nova ordem / editar ordem</h3>
+<div class="grade">
+<div><label for="titulo">Título</label><input id="titulo" name="titulo" type="text" required minlength="3"></div>
+<div><label for="prioridade">Prioridade</label><select id="prioridade" name="prioridade" required><option>Baixa</option><option>Média</option><option>Alta</option><option>Crítica</option></select></div>
+<div><label for="status">Status</label><select id="status" name="status" required><option>Pendente</option><option>Em andamento</option><option>Concluída</option><option>Finalizada</option></select></div>
+<div><label for="responsavel">Responsável</label><input id="responsavel" name="responsavel" type="text" ></div>
+<div><label for="prazo">Prazo</label><input id="prazo" name="prazo" type="date" data-futuro="1"></div>
+<div style="grid-column:1/-1"><label for="descricao">Descrição</label><textarea id="descricao" name="descricao" rows="2"></textarea></div>
+</div>
+<p id="msg" role="status"></p>
+<button class="p" type="submit">Salvar</button> <button type="button" id="cancelar">Cancelar</button>
+</form>
+</main></div>
+<script src="js/validacao.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
